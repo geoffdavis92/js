@@ -1,0 +1,24 @@
+{
+  "name": "js",
+  "version": "0.1.0",
+  "description": "Javascript modules/snippets",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffdavis92/js.git"
+  },
+  "keywords": [
+    "JS",
+    "module",
+    "snippet"
+  ],
+  "author": "Geoff Davis <geoffdavis92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoffdavis92/js/issues"
+  },
+  "homepage": "https://github.com/geoffdavis92/js#readme"
+}
