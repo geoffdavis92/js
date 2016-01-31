@@ -1,5 +1,6 @@
 /**
- * Class Registration - registers given custom HTML tags
+ * @name Registration
+ * @description registers given custom HTML tags
  * @param  {String}	[name] Name of the tag to register
  * @param  {Object} [styleObject] JS(ON) object of styles to add on to each instance
  * @param  {Object} [proto=Object.create(HTMLElement.prototype)] Element prototype to use
@@ -13,6 +14,7 @@ class Registration {
         this.init = this.registerElement(this._name, this._proto)
     }
     /**
+     * @name addEl
      * @param {String} [text] Inner text of element
      * @param {Object} [attributes] JS(ON) object of attributes to add
      * @param {String} [target] Target element container
@@ -31,6 +33,7 @@ class Registration {
         return ctx.defineStyle()
     }
     /**
+     * @name addMethod
      * @param {String} [name] name of the method to add
      * @param {Function} [fn] code to execute on method call
      * @param {Object} [proto] Prototype to use, defaults to Class's default-called prototype
@@ -41,10 +44,24 @@ class Registration {
         proto[name] = fn
         return this
     }
+    /**
+     * @name addProp
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     */
     addProp(name, prop, proto = this._proto, reg = this.registerElement) {
         proto[name] = prop
         return this
     }
+    /**
+     * @name defineStyle
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     */
     defineStyle(styleObject = this._styles, proto = this._proto, ctx = this) {
         let allEl = document.querySelectorAll(ctx._name)
         for (let i = 0; i < allEl.length; i++) {
@@ -54,12 +71,25 @@ class Registration {
         }
         return this
     }
+    /**
+     * @name registerElement
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     * @param {[type]}
+     */
     registerElement(n, p) {
         return document.registerElement(n, {
             prototype: Object.create(p)
         })
     }
 }
+/**
+ * @name register
+ * @param  {String} [name] name of your custom element
+ * @param  {Object} [proto] Proto type object, defaults to HTMLElement.prototype
+ * @return {Class} instance of Registration class
+ */
 const register = (name, proto) => {
     return new Registration(name, proto)
 }

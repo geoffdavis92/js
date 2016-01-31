@@ -1,8 +1,6 @@
 # Registration
 
-[registration/register.js:8-62](https://github.com/geoffdavis92/js/blob/7f27006d77912e051fe439ea12d24f0a37848801/registration/register.js#L8-L62 "Source code on GitHub")
-
-Class Registration - registers given custom HTML tags
+[registration/register.js:9-86](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L9-L86 "Source code on GitHub")
 
 **Parameters**
 
@@ -14,7 +12,7 @@ Returns **Null**
 
 ## addEl
 
-[registration/register.js:22-32](https://github.com/geoffdavis92/js/blob/7f27006d77912e051fe439ea12d24f0a37848801/registration/register.js#L22-L32 "Source code on GitHub")
+[registration/register.js:24-34](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L24-L34 "Source code on GitHub")
 
 **Parameters**
 
@@ -27,7 +25,7 @@ Returns **function** Class `defineStyle` method
 
 ## addMethod
 
-[registration/register.js:40-43](https://github.com/geoffdavis92/js/blob/7f27006d77912e051fe439ea12d24f0a37848801/registration/register.js#L40-L43 "Source code on GitHub")
+[registration/register.js:43-46](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L43-L46 "Source code on GitHub")
 
 **Parameters**
 
@@ -37,3 +35,44 @@ Returns **function** Class `defineStyle` method
 -   `reg` **[Function]** Registration function, defaults to this.RegisterElement
 
 Returns **Object** Class reference
+
+## addProp
+
+[registration/register.js:54-57](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L54-L57 "Source code on GitHub")
+
+**Parameters**
+
+-   `name`  
+-   `prop`  
+-   `proto`   (optional, default `this._proto`)
+-   `reg`   (optional, default `this.registerElement`)
+
+## defineStyle
+
+[registration/register.js:65-73](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L65-L73 "Source code on GitHub")
+
+**Parameters**
+
+-   `styleObject`   (optional, default `this._styles`)
+-   `proto`   (optional, default `this._proto`)
+-   `ctx`   (optional, default `this`)
+
+## registerElement
+
+[registration/register.js:81-85](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L81-L85 "Source code on GitHub")
+
+**Parameters**
+
+-   `n`  
+-   `p`  
+
+# register
+
+[registration/register.js:93-95](https://github.com/geoffdavis92/js/blob/cfdf161ef3dbd6615ded8e4beb02da95d86a7792/registration/register.js#L93-L95 "Source code on GitHub")
+
+**Parameters**
+
+-   `name` **[String]** name of your custom element
+-   `proto` **[Object]** Proto type object, defaults to HTMLElement.prototype
+
+Returns **Class** instance of Registration class
